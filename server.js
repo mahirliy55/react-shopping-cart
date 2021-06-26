@@ -9,8 +9,7 @@ app.use(bodyParser.json());
 app.use("/", express.static(__dirname + "/build"));
 app.get("/", (req, res) => res.sendFile(__dirname + "/build/index.html"));
 
-mongoose.connect(
-  process.env.MONGODB_URL || "mongodb://localhost/react-shopping-cart-db",
+mongoose.connect("mongodb+srv://salam1234:<password>@cluster0.fbo9z.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
   {
     useNewUrlParser: true,
     useCreateIndex: true,
